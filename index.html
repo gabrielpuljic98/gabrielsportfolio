@@ -94,6 +94,11 @@
       input::placeholder, textarea::placeholder { color: #7e90ae; }
       .fineprint { font-size: 0.9rem; color: var(--muted); }
       footer { padding: 34px 0 48px; color: var(--muted); font-size: 0.92rem; text-align: center; }
+      .form-success { padding: 12px 14px; border-radius: 14px; background: #e8f5ec; color: #166534; font-size: 0.95rem; }
+.form-error { color: #b91c1c; font-size: 0.9rem; }
+[data-fs-success]:empty, [data-fs-error]:empty { display: none; }
+input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: #b91c1c; }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; box-shadow: none; }
       @media (max-width: 860px) {
         .hero-grid, .grid-2, .grid-3 { grid-template-columns: 1fr; }
         .nav { flex-direction: column; align-items: flex-start; }
@@ -217,21 +222,29 @@
                 <a class="btn btn-primary" href="cv/gabrielcv2026.pdf">Download CV</a>
               </div>
             </div>
-            <form action="https://formspree.io/f/mwlvwzob" method="POST" id="contact-form">
-              <div class="field">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" required placeholder="Your name">
-              </div>
-              <div class="field">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" required placeholder="you@company.com">
-              </div>
-              <div class="field">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required placeholder="Tell me about the role or how you'd like to connect."></textarea>
-              </div>
-              <button class="btn btn-primary" type="submit">Send message</button>
-            </form>
+        <div>
+  <div class="form-success" data-fs-success></div>
+  <div class="form-error" data-fs-error></div>
+
+  <form id="contact-form" action="https://formspree.io/f/mwlvwzob" method="POST">
+    <div class="field">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required placeholder="Your name" data-fs-field>
+      <span class="form-error" data-fs-error="name"></span>
+    </div>
+    <div class="field">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required placeholder="you@company.com" data-fs-field>
+      <span class="form-error" data-fs-error="email"></span>
+    </div>
+    <div class="field">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required placeholder="Tell me about the role or how you'd like to connect." data-fs-field></textarea>
+      <span class="form-error" data-fs-error="message"></span>
+    </div>
+    <button class="btn btn-primary" type="submit" data-fs-submit-btn>Send message</button>
+  </form>
+</div>
           </div>
         </div>
       </section>
@@ -239,5 +252,10 @@
     <footer>
       <div class="wrap">© 2026 Gabriel Vlahić-Puljić</div>
     </footer>
+    <script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#contact-form', formId: 'mwlvwzob' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
   </body>
   </html>
