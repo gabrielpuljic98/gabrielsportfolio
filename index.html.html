@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gabriel Puljić-Vlahić | Remote Service Desk / IT Support Specialist</title>
+    <meta name="description" content="Personal portfolio for Gabriel Puljić-Vlahić, an aspiring remote Service Desk / IT Support Specialist based in Mostar, Bosnia and Herzegovina.">
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7fafc;
+        --panel: #ffffff;
+        --panel-soft: #eef5fb;
+        --text: #122033;
+        --muted: #56667a;
+        --accent: #155e75;
+        --accent-soft: rgba(21, 94, 117, 0.1);
+        --line: rgba(18, 32, 51, 0.1);
+        --shadow: 0 18px 45px rgba(18, 32, 51, 0.08);
+        --radius: 24px;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.5;
+      }
+      a { color: inherit; text-decoration: none; }
+      .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+      .topbar { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(12px); background: rgba(247, 250, 252, 0.9); border-bottom: 1px solid var(--line); }
+      .nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; gap: 16px; }
+      .brand { font-weight: 700; letter-spacing: 0.02em; }
+      .navlinks { display: flex; gap: 18px; color: var(--muted); font-size: 0.95rem; flex-wrap: wrap; }
+      .navlinks a:hover, .link:hover { color: var(--accent); }
+      .hero { padding: 44px 0 28px; }
+      .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; align-items: center; }
+      .eyebrow {
+        display: inline-flex; gap: 10px; align-items: center;
+        padding: 10px 14px; border: 1px solid var(--line); border-radius: 999px;
+        color: var(--accent); background: var(--accent-soft); font-size: 0.92rem;
+      }
+      h1 { margin: 18px 0 14px; font-size: clamp(2.6rem, 7vw, 5rem); line-height: 0.96; letter-spacing: -0.05em; }
+      .lede { max-width: 62ch; font-size: clamp(1.02rem, 2vw, 1.18rem); color: var(--muted); }
+      .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+      .btn {
+        display: inline-flex; align-items: center; justify-content: center; min-height: 48px;
+        padding: 0 18px; border-radius: 14px; border: 1px solid transparent; font-weight: 600;
+      }
+      .btn-primary { background: var(--accent); color: #fff; }
+      .btn-secondary { background: #fff; border-color: var(--line); color: var(--text); }
+      .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
+      .hero-card, .section-card { background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow); border-radius: var(--radius); }
+      .hero-card { padding: 18px; }
+      .photo-shell {
+        display: grid; place-items: center; width: 100%; aspect-ratio: 1 / 1; border-radius: 22px;
+        border: 1px dashed rgba(18, 32, 51, 0.18); background: linear-gradient(180deg, var(--panel-soft), #ffffff);
+        overflow: hidden; position: relative;
+      }
+      .photo-shell img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .photo-label {
+        position: absolute; inset: auto 16px 16px 16px; padding: 10px 12px; border-radius: 999px;
+        background: rgba(255,255,255,0.88); color: var(--text); font-weight: 600; font-size: 0.92rem; text-align: center;
+      }
+      .imagestyle1 { position: relative; top: -80px; }
+      .hero-note { margin-top: 14px; color: var(--muted); font-size: 0.93rem; }
+      .section { padding: 18px 0 0; }
+      .section-card { padding: 26px; }
+      .grid-2, .grid-3 { display: grid; gap: 18px; }
+      .grid-2 { grid-template-columns: 1fr 1fr; }
+      .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      h2 { margin: 0 0 14px; font-size: clamp(1.45rem, 3vw, 2rem); letter-spacing: -0.03em; }
+      h3 { margin: 0 0 10px; font-size: 1.05rem; }
+      p { margin: 0; }
+      .muted { color: var(--muted); }
+      .stack { display: grid; gap: 12px; margin-top: 18px; }
+      .item, .tagcard { padding: 16px 18px; border-radius: 18px; background: #fff; border: 1px solid var(--line); }
+      .item strong { display: block; margin-bottom: 4px; }
+      .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+      .tag { padding: 10px 12px; border-radius: 999px; background: var(--panel-soft); border: 1px solid var(--line); font-size: 0.95rem; }
+      .timeline { display: grid; gap: 12px; margin-top: 18px; }
+      .timeline-item { position: relative; padding-left: 18px; }
+      .timeline-item::before { content: ""; position: absolute; left: 0; top: 8px; width: 10px; height: 10px; border-radius: 999px; background: var(--accent); }
+      form { display: grid; gap: 14px; margin-top: 18px; }
+      .field { display: grid; gap: 8px; }
+      label { font-size: 0.94rem; color: var(--muted); }
+      input, textarea {
+        width: 100%; border-radius: 14px; border: 1px solid var(--line);
+        background: #fff; color: var(--text); padding: 14px 15px; font: inherit;
+      }
+      textarea { min-height: 140px; resize: vertical; }
+      input::placeholder, textarea::placeholder { color: #7e90ae; }
+      .fineprint { font-size: 0.9rem; color: var(--muted); }
+      footer { padding: 34px 0 48px; color: var(--muted); font-size: 0.92rem; text-align: center; }
+      @media (max-width: 860px) {
+        .hero-grid, .grid-2, .grid-3 { grid-template-columns: 1fr; }
+        .nav { flex-direction: column; align-items: flex-start; }
+        .hero { padding-top: 34px; }
+      }
+      .section-title { margin-bottom: 18px; }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="wrap nav">
+        <div class="brand">Gabriel Puljić-Vlahić</div>
+        <div class="navlinks">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#training">Training</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <div class="eyebrow">IT Support | Service Desk</div>
+            <h1>Gabriel Vlahić-Puljić</h1>
+            <p class="lede">Aspiring Remote Service Desk Specialist with hands-on training in troubleshooting, ticketing and remote support.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#contact">Contact me</a>
+              <a class="btn btn-secondary" href="C:\Users\AMG_Computers\Downloads\portfolio\cv\gabrielcv2026.pdf"">Download CV</a>
+            </div>
+            <p class="hero-note">Based in Mostar, Bosnia and Herzegovina.</p>
+          </div>
+          <aside class="hero-card">
+            <div class="photo-shell">
+              <img src="C:\Users\AMG_Computers\Downloads\portfolio\img\1791964412121.jpg" class="t-image imagestyle1">
+              
+            </div>
+            
+          </aside>
+        </div>
+      </section>
+      <section class="section" id="about">
+        <div class="wrap section-card">
+          <div class="section-title"><h2>About</h2></div>
+          <p class="muted">Aspiring Service Desk Specialist with hands-on training in hardware and software troubleshooting, ticket handling (Zendesk), VoIP (3CX) and Windows, Ubuntu and macOS. Former restaurant director who led a team of 6, communicated with guests and suppliers daily, and handled the technical side of the business (POS, Wi-Fi, cameras, printers). BSc in Information Science, English C1. Looking for a remote service desk role where I can grow quickly.</p>
+        </div>
+      </section>
+      <section class="section" id="skills">
+        <div class="wrap section-card">
+          <div class="section-title"><h2>Technical Skills</h2></div>
+          <div class="grid-3">
+            <div class="tagcard"><h3>Operating systems</h3><div class="tags"><span class="tag">Windows</span><span class="tag">Ubuntu (Linux)</span><span class="tag">macOS</span></div></div>
+            <div class="tagcard"><h3>Ticketing</h3><div class="tags"><span class="tag">Zendesk</span></div></div>
+            <div class="tagcard"><h3>VoIP</h3><div class="tags"><span class="tag">3CX</span></div></div>
+            <div class="tagcard"><h3>Remote support tools</h3><div class="tags"><span class="tag">TeamViewer</span><span class="tag">AnyDesk</span></div></div>
+            <div class="tagcard"><h3>Troubleshooting</h3><div class="tags"><span class="tag">Hardware diagnostics</span><span class="tag">Software diagnostics</span><span class="tag">Printers</span><span class="tag">Peripherals</span><span class="tag">Wi-Fi basics</span></div></div>
+            <div class="tagcard"><h3>Security / Productivity / Web</h3><div class="tags"><span class="tag">Password management tools</span><span class="tag">Excel</span><span class="tag">Google Sheets</span><span class="tag">Google Workspace</span><span class="tag">Webflow</span></div></div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="training">
+        <div class="wrap section-card">
+          <div class="section-title"><h2>Training</h2></div>
+          <div class="item">
+            <strong>IT Technician Support Bootcamp, Sportradar</strong>
+            <p class="muted">September 2026 · Certificate of completion</p>
+            <div class="stack">
+              <div>Handled simulated support tickets in Zendesk</div>
+              <div>Tested calls in the 3CX VoIP system</div>
+              <div>Troubleshot hardware and software issues on Windows, Ubuntu and macOS</div>
+              <div>Used password management tools</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="experience">
+        <div class="wrap section-card">
+          <div class="section-title"><h2>Experience</h2></div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <h3>Restaurant Director, Velika Ada, Blagaj</h3>
+              <p class="muted">2016-2026</p>
+              <div class="stack">
+                <div>Led a team of 6: scheduling, task assignment and daily problem solving</div>
+                <div>Communicated with guests and suppliers daily and resolved complaints under time pressure</div>
+                <div>First point of contact for technical issues: POS, reservation system, Wi-Fi, cameras and printers</div>
+                <div>Managed inventory, budgets and sales reports in Excel and Google Sheets</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="education">
+        <div class="wrap section-card">
+          <div class="section-title"><h2>Education</h2></div>
+          <div class="stack">
+            <div class="item"><strong>Bachelor of Information Science, Faculty of Philosophy, University of Mostar</strong><p class="muted">2017-2022</p></div>
+            <div class="item"><strong>Web Development Course (Webflow)</strong><p class="muted">2025</p></div>
+            <div class="item"><strong>Web Design, Strojarska škola Fausta Vrančića</strong><p class="muted">2014-2017</p></div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap section-card">
+          <div class="section-title"><h2>Languages</h2></div>
+          <p class="muted">Croatian (native), English (C1)</p>
+        </div>
+      </section>
+      <section class="section" id="contact">
+        <div class="wrap section-card">
+          <div class="grid-2">
+            <div>
+              <h2>Contact</h2>
+              <p class="muted">Open to remote service desk and IT support roles.</p>
+              <p class="fineprint" style="margin-top:14px;">Email: <a class="link" href="mailto:gabriel.puljic98@gmail.com">gabriel.puljic98@gmail.com</a></p>
+              <div class="cta-row" style="margin-top:18px;">
+                <a class="btn btn-secondary" href="https://www.linkedin.com/in/gabriel-vlahic-puljic-">LinkedIn</a>
+                <a class="btn btn-primary" href="/cv.pdf">Download CV</a>
+              </div>
+            </div>
+            <form action="mailto:gabriel.puljic98@gmail.com" method="POST" id="contact-form">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" required placeholder="Your name">
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required placeholder="you@company.com">
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required placeholder="Tell me about the role or how you'd like to connect."></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit">Send message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap">© 2026 Gabriel Puljić-Vlahić</div>
+    </footer>
+  </body>
+  </html>
