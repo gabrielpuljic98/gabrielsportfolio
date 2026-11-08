@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Gabriel Vlahić-Puljić – CV</title>
+  <!-- Source for Gabriel-Vlahic-Puljic-CV.pdf. Edit here, then re-export to PDF (A4, print backgrounds on). -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    @page { size: A4; margin: 0; }
+    :root {
+      --text: #0f172a; --muted: #475569; --line: #e2e8f0;
+      --indigo: #4f46e5; --pink: #db2777; --amber: #f59e0b;
+      --side: #f5f3ff;
+      --gradient: linear-gradient(100deg, #4f46e5 0%, #db2777 55%, #f59e0b 100%);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body { font: 400 9.3pt/1.42 "IBM Plex Sans", system-ui, sans-serif; color: var(--text); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    a { color: inherit; text-decoration: none; }
+    p { margin: 0; }
+    .page { width: 210mm; height: 297mm; display: grid; grid-template-columns: 68mm 1fr; overflow: hidden; position: relative; }
+    .page::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2.2mm; background: var(--gradient); }
+
+    /* Sidebar */
+    aside { background: var(--side); padding: 13mm 7mm 10mm 9mm; }
+    .photo { width: 36mm; height: 36mm; border-radius: 50%; padding: 1.2mm; background: var(--gradient); margin-bottom: 7mm; }
+    .photo img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: 50% 30%; border: 1mm solid #fff; display: block; }
+    aside h2 { margin: 6.5mm 0 2.6mm; }
+    aside h2:first-of-type { margin-top: 0; }
+    .contact { list-style: none; margin: 0; padding: 0; display: grid; gap: 2mm; }
+    .contact li { display: flex; gap: 2.4mm; align-items: flex-start; font-size: 8.8pt; word-break: break-word; }
+    .contact svg { width: 3.6mm; height: 3.6mm; flex: none; margin-top: 0.5mm; color: var(--indigo); }
+    .skill-group + .skill-group { margin-top: 3mm; }
+    .skill-group h3 { font-size: 8.6pt; margin: 0 0 1.4mm; color: var(--muted); font-weight: 600; }
+    .chips { display: flex; flex-wrap: wrap; gap: 1.3mm; }
+    .chip { padding: 0.6mm 2.2mm; border-radius: 99px; background: #fff; border: 0.25mm solid #ddd6fe; font-size: 8.3pt; }
+    .lang { display: flex; justify-content: space-between; font-size: 8.8pt; }
+    .lang + .lang { margin-top: 1.4mm; }
+    .lang span { color: var(--muted); }
+
+    /* Main */
+    main { padding: 12mm 11mm 9mm 10mm; }
+    h1 { margin: 0; font-size: 24pt; line-height: 1.05; letter-spacing: -0.02em; background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .role { margin-top: 1.6mm; font: 700 11pt "JetBrains Mono", monospace; color: var(--text); }
+    .summary { margin-top: 3.4mm; color: var(--muted); }
+    h2 { display: flex; align-items: center; gap: 2.5mm; margin: 5mm 0 2.4mm; font: 700 8.4pt "JetBrains Mono", monospace; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pink); }
+    h2::after { content: ""; flex: 1; height: 0.3mm; background: var(--line); }
+    .entry + .entry { margin-top: 3mm; }
+    .entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+    .entry-head h3 { margin: 0; font-size: 10.4pt; }
+    .entry-head .when { font: 500 8.3pt "JetBrains Mono", monospace; color: var(--indigo); white-space: nowrap; }
+    .where { color: var(--muted); font-size: 9pt; }
+    .where a { color: var(--indigo); font-weight: 600; }
+    ul.points { margin: 1mm 0 0; padding-left: 4.2mm; }
+    ul.points li + li { margin-top: 0.6mm; }
+    ul.points li::marker { color: var(--pink); }
+    .stack { margin-top: 1.4mm; font: 500 8pt "JetBrains Mono", monospace; color: var(--indigo); }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside>
+      <div class="photo"><img src="../img/1791964412121.jpg" alt="Gabriel Vlahić-Puljić"></div>
+
+      <h2>Contact</h2>
+      <ul class="contact">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><a href="mailto:gabriel.puljic98@gmail.com">gabriel.puljic98@gmail.com</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+38763271267">+387 63 271 267</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><a href="https://gabrielpuljic98.github.io/gabrielsportfolio/">Portfolio website</a></li>
+        <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.5V9h3.6v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg><a href="https://www.linkedin.com/in/gabriel-vlahic-puljic-">linkedin.com/in/gabriel-vlahic-puljic-</a></li>
+        <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg><a href="https://github.com/gabrielpuljic98">github.com/gabrielpuljic98</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Mostar, Bosnia and Herzegovina · Remote</li>
+      </ul>
+
+      <h2>Skills</h2>
+      <div class="skill-group">
+        <h3>Front-end</h3>
+        <div class="chips"><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span><span class="chip">Responsive design</span><span class="chip">Accessibility</span><span class="chip">SEO basics</span></div>
+      </div>
+      <div class="skill-group">
+        <h3>Tools</h3>
+        <div class="chips"><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Webflow</span><span class="chip">Deployment &amp; hosting</span></div>
+      </div>
+      <div class="skill-group">
+        <h3>Systems &amp; support</h3>
+        <div class="chips"><span class="chip">Windows</span><span class="chip">Ubuntu</span><span class="chip">macOS</span><span class="chip">Troubleshooting</span><span class="chip">Zendesk</span></div>
+      </div>
+      <div class="skill-group">
+        <h3>Other</h3>
+        <div class="chips"><span class="chip">Google Workspace</span><span class="chip">Excel</span><span class="chip">Team leadership</span><span class="chip">Customer communication</span></div>
+      </div>
+
+      <h2>Languages</h2>
+      <div class="lang">Croatian <span>Native</span></div>
+      <div class="lang">English <span>C1</span></div>
+    </aside>
+
+    <main>
+      <h1>Gabriel<br>Vlahić-Puljić</h1>
+      <p class="role">Front-end Web Developer</p>
+      <p class="summary">Front-end web developer building responsive, accessible websites with HTML, CSS and JavaScript, as well as Webflow. Designed, built and launched SafeLeap, a privacy-first web app for planning a career change. Brings ten years of experience running a restaurant (leading a team, working with customers every day and keeping the technology running) and IT support training from Sportradar. Looking for a remote junior front-end or web developer role.</p>
+
+      <h2>Projects</h2>
+      <div class="entry">
+        <div class="entry-head"><h3>SafeLeap · Web app</h3><span class="when">2026</span></div>
+        <p class="where"><a href="https://safeleap.app">safeleap.app</a> · Live product</p>
+        <ul class="points">
+          <li>Calculator that shows how many months someone can live without income before changing career</li>
+          <li>15 career goals, each adjusting how long the new path usually takes to start paying</li>
+          <li>Privacy first: all calculations run in the browser, no user data is stored or sent</li>
+          <li>Content structured for search: guides and FAQ answering real questions</li>
+        </ul>
+        <p class="stack">HTML · CSS · JavaScript · SEO</p>
+      </div>
+      <div class="entry">
+        <div class="entry-head"><h3>Personal Portfolio</h3><span class="when">2026</span></div>
+        <p class="where">Hand-coded, no frameworks · <a href="https://github.com/gabrielpuljic98/gabrielsportfolio">code on GitHub</a></p>
+        <ul class="points">
+          <li>Responsive single-page site with CSS Grid, mobile menu and scroll animations</li>
+          <li>Accessibility built in: keyboard focus styles, skip link, reduced-motion support</li>
+        </ul>
+        <p class="stack">HTML · CSS · JavaScript · Git</p>
+      </div>
+
+      <h2>Experience</h2>
+      <div class="entry">
+        <div class="entry-head"><h3>Restaurant Director</h3><span class="when">2016 – 2026</span></div>
+        <p class="where">Velika Ada, Blagaj</p>
+        <ul class="points">
+          <li>Led a team of 6: scheduling, task assignment and daily problem solving</li>
+          <li>Dealt with guests and suppliers daily and resolved complaints under time pressure</li>
+          <li>First point of contact for all technology: POS, reservation system, Wi-Fi, cameras and printers</li>
+          <li>Managed inventory, budgets and sales reports in Excel and Google Sheets</li>
+        </ul>
+      </div>
+
+      <h2>Training</h2>
+      <div class="entry">
+        <div class="entry-head"><h3>IT Technician Support Bootcamp</h3><span class="when">Sep 2026</span></div>
+        <p class="where">Sportradar · Certificate of completion</p>
+        <ul class="points">
+          <li>Troubleshot hardware and software issues on Windows, Ubuntu and macOS; handled tickets in Zendesk</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-head"><h3>Web Development Course (Webflow)</h3><span class="when">2025</span></div>
+      </div>
+
+      <h2>Education</h2>
+      <div class="entry">
+        <div class="entry-head"><h3>Bachelor of Information Science</h3><span class="when">2017 – 2022</span></div>
+        <p class="where">Faculty of Philosophy, University of Mostar</p>
+      </div>
+      <div class="entry">
+        <div class="entry-head"><h3>Web Design</h3><span class="when">2014 – 2017</span></div>
+        <p class="where">Strojarska škola Fausta Vrančića</p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
